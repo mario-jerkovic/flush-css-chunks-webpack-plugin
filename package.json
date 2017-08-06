@@ -1,0 +1,47 @@
+{
+  "name": "flush-css-chunks-webpack-plugin",
+  "version": "0.0.1",
+  "description": "Generates CSS asset map from chunks",
+  "main": "lib/flush-css-chunks-webpack-plugin.js",
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "clean": "rimraf lib",
+    "build": "npm run clean && babel ./src -d lib",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "css-chunks"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mario-jerkovic/flush-css-chunks-webpack-plugin.git"
+  },
+  "author": "Mario Jerkovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mario-jerkovic/flush-css-chunks-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/mario-jerkovic/flush-css-chunks-webpack-plugin#readme",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "*"
+  },
+  "dependencies": {
+    "webpack-sources": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.4.1"
+  }
+}
