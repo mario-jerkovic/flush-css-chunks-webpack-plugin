@@ -64,4 +64,4 @@ typings/
 .env
 
 # Project
-lib/
+lib/*
