@@ -1,5 +1,7 @@
-![flash_css_logo](https://raw.githubusercontent.com/mario-jerkovic/flush-css-chunks-webpack-plugin/master/flush_css.svg)
 <div align="center">
+<img width="500" height="200"
+    src="https://cdn.rawgit.com/mario-jerkovic/flush-css-chunks-webpack-plugin/22d6154e/flush_css.png">
+  
   <h1>Flush CSS Chunks Webpack Plugin</h1>
   <p>Generates CSS hash for mapping between Webpack chunks and CSS chunks.</p>
 </div>
