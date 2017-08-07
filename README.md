@@ -1,8 +1,5 @@
+![flash_css_logo](./flush_css.svg)
 <div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="200" height="200"
-      src="https://webpack.js.org/assets/icon-square-big.svg">
-  </a>
   <h1>Flush CSS Chunks Webpack Plugin</h1>
   <p>Generates CSS hash for mapping between Webpack chunks and CSS chunks.</p>
 </div>
