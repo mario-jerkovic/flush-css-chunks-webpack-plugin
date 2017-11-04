@@ -51,6 +51,8 @@ const config = {
 };
 ```
 
+- **assetPath** - ***default: null*** By default plugin uses output.publichPath defined in webpack.config to generate
+asset mapping but if you need custom asset path you can use this property
 - **entryOnly** - ***default: false*** By default plugin injects the ```cssHash``` to every ```.js``` 
 file produced by webpack as this enables hot swap mapping, if set to ```true``` plugin will only inject the mapping
 in the initial ```.js``` bundle (use only for **PRODUCTION**)
