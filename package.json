@@ -1,6 +1,6 @@
 {
   "name": "flush-css-chunks-webpack-plugin",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Generates CSS asset map from chunks",
   "main": "lib/flush-css-chunks-webpack-plugin.js",
   "files": [
