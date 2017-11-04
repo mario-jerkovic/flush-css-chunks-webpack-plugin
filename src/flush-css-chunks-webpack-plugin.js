@@ -34,6 +34,7 @@ class FlushCSSChunks {
   constructor(options = {}) {
     this.options = Object.assign({
       entryOnly: false,
+      assetPath: null,
     }, options);
   }
 
@@ -53,7 +54,7 @@ class FlushCSSChunks {
 
         const assetMapping = generateAssetsHook(
           generateAssetMapping(
-            publicPath,
+            this.options.assetPath || publicPath,
             assetsByChunkName,
           ),
         );
