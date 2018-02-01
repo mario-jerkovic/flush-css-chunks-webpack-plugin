@@ -32,6 +32,10 @@ function generateAssetsHook(mapping = {}) {
 
 class FlushCSSChunks {
   constructor(options = {}) {
+    if (options.entries != null && !Array.isArray(options.entries)) {
+      throw new Error('Invalid Options\n\noptions.entries should be array\n');
+    }
+
     this.options = Object.assign({
       entryOnly: false,
       assetPath: null,
