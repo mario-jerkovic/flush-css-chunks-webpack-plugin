@@ -35,7 +35,7 @@ class FlushCSSChunks {
     this.options = Object.assign({
       entryOnly: false,
       assetPath: null,
-      entries: null
+      entries: null,
     }, options);
   }
 
@@ -65,8 +65,9 @@ class FlushCSSChunks {
             return;
           }
 
-          if (this.options.entryOnly && this.options.entries && this.options.entries.every(entry => chunk.name !== entry)) {
-            return
+          if (this.options.entryOnly &&
+            this.options.entries && this.options.entries.every(entry => chunk.name !== entry)) {
+            return;
           }
 
           chunk.files
