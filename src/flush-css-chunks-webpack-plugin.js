@@ -66,7 +66,7 @@ class FlushCSSChunks {
           }
 
           if (this.options.entryOnly &&
-            this.options.entries && this.options.entries.every(entry => chunk.name !== entry)) {
+            this.options.entries && !this.options.entries.includes(chunk.name)) {
             return;
           }
 
