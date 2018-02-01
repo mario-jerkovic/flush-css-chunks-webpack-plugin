@@ -35,6 +35,7 @@ class FlushCSSChunks {
     this.options = Object.assign({
       entryOnly: false,
       assetPath: null,
+      entries: null
     }, options);
   }
 
@@ -62,6 +63,10 @@ class FlushCSSChunks {
         chunks.forEach((chunk) => {
           if (this.options.entryOnly && !isInitial(chunk)) {
             return;
+          }
+
+          if (this.options.entryOnly && this.options.entries && this.options.entries.every(entry => chunk.name !== entry)) {
+            return
           }
 
           chunk.files
