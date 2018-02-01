@@ -45,7 +45,7 @@ const config = {
     plugins: [
         new FlushCSSChunksWebpackPlugin({
             assetPath: '/asset/static/', // defaults to output.publichPath defined in webpack.config
-            entryOnly: true // defaults to false,
+            entryOnly: true, // defaults to false,
             entries: ['common'] // defaults to null
         })
     ]
