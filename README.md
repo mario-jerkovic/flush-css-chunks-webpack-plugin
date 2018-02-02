@@ -57,5 +57,5 @@ asset mapping but if you need custom asset path you can use this property
 - **entryOnly** - ***default: false*** By default plugin injects the ```cssHash``` to every ```.js``` 
 file produced by webpack as this enables hot swap mapping, if set to ```true``` plugin will only inject the mapping
 in the initial ```.js``` bundle (use only for **PRODUCTION**)
-- **entries** - ***default: null*** By default, if ```entryOnly``` is specified, plugin injects the ```cssHash``` into every ```.js``` produced by webpack. Using this option you can specify entry chunks in which the CSS mapping will be injected. This is useful if you have common chunks that are already loaded on the page. **Note:** This only works if ```entryOnly``` is set to ```true```, if it is set to ```false```, CSS mapping will be injected in every chunk.
+- **entries** - ***default: null*** By default, if ```entryOnly``` is specified, plugin injects the ```cssHash``` into every entry chunk. Using this option you can specify entry chunks in which the CSS mapping will be injected. This is useful if you have common chunks that are already loaded on the page. **Note:** This only works if ```entryOnly``` is set to ```true```, if it is set to ```false```, CSS mapping will be injected in every chunk.
 
