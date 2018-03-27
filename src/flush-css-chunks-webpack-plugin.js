@@ -1,8 +1,17 @@
 const { ConcatSource } = require('webpack-sources');
 const { matchObject } = require('webpack/lib/ModuleFilenameHelpers');
 
+const pluginName = 'flush-css-chunks';
+
 function isInitial(chunk) {
-  return chunk.isInitial() || chunk.parents.length === 0;
+  let parentCount = 0;
+
+  // eslint-disable-next-line no-restricted-syntax
+  for (const chunkGroup of chunk.groupsIterable) {
+    parentCount += chunkGroup.getNumberOfParents();
+  }
+
+  return chunk.isOnlyInitial() || parentCount === 0;
 }
 
 function generateAssetMapping(path, assets) {
@@ -52,8 +61,8 @@ class FlushCSSChunks {
   }
 
   apply(compiler) {
-    compiler.plugin('compilation', (compilation) => {
-      compilation.plugin('optimize-chunk-assets', (chunks, callback) => {
+    compiler.hooks.thisCompilation.tap(pluginName, (compilation) => {
+      compilation.hooks.optimizeChunkAssets.tapAsync(pluginName, (chunks, callback) => {
         const { publicPath } = compiler.options.output;
         const { assetsByChunkName } = compilation.getStats().toJson();
 
